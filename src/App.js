@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Products from './component/Products'
+import { Route, Routes } from 'react-router-dom';
+import Carrito from './component/Carrito';
+import { Footer } from './component/Footer';
+import { AuthProvider, CarritoContext, CartContext, useCart } from './context/AuthContext';
+import { React, useContext } from 'react';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Routes>
+      <Route path='/home' element={<Products />}/>
+      <Route path='/pto' element={<Products />}/>
+      <Route path='/carrito' element={<Carrito />}/>
+      </Routes>
+   
   );
 }
 

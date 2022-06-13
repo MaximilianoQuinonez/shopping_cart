@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 100%;
 }
 
 .Carrito {
@@ -15,14 +16,51 @@
 .Item {
   border: 1px solid black;
   width: 300px;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.Item button {
+  padding: 0.5rem;
+  width: 50%;
+  border-radius: 1rem;
+}
+
+.Item button:hover {
+  background-color: rgb(218, 61, 61);
 }
 
 .carrito-contenedor {
   display: flex;
   justify-content: space-around;
+  text-align: center;
 }
 
-.Stock{
+.carrito-header {
+  text-align: center;
+}
+
+.carrito-header button {
+  padding: 0.5rem;
+  width: 150px;
+  border-radius: 1rem;
+}
+
+.carrito-footer {
+  text-align: center;
+}
+
+.carrito-footer button {
+  padding: 0.5rem;
+  width: 150px;
+  border-radius: 1rem;
+}
+
+.carrito-footer button:hover {
+  background-color: skyblue;
+}
+
+.Stock {
   width: 50% vp;
   display: flex;
   flex-direction: row;
@@ -31,11 +69,64 @@
   justify-items: center;
 }
 
-.Stock .producto{
+.Stock .producto {
   margin: 2rem;
 }
+
+.Stock .producto .cantidad {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Stock .producto .cantidad button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.Stock .producto .cantidad button:hover {
+  background: gray;
+}
+
+.Stock .producto .agregar {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.Stock .producto .agregar:hover {
+  background-color: greenyellow;
+}
+
 .Stock img {
   width: 200px;
+}
+
+.Stock p {
+  font-size: 15pt;
+  font-weight: bold;
+  margin: 0.5rem 1rem;
+}
+
+.Stock .container {
+  border: 1px solid black;
+  width: 300px;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+.Stock .container:hover {
+  border-bottom: 1px solid;
+  background: skyblue;
+}
+
+.contenedor-de-texto {
+  text-align: center;
+}
+
+.contenedor-de-texto img {
+  width: 400px;
 }
 
 footer {
@@ -44,6 +135,27 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-bottom: 2rem;
+  padding: 2rem;
   font-size: 12pt;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  outline: none;
+}
+
+footer a:focus {
+  border-bottom: 1px solid;
+  background: whitesmoke;
+}
+
+footer a:hover {
+  border-bottom: 1px solid;
+  background: whitesmoke;
+}
+
+footer a:active {
+  background: #000000;
+  color: whitesmoke;
 }

@@ -1,26 +1,25 @@
 export const Footer = () => {
     return (
-        <footer>
+        <footer className="footer">
             <section>
-                <h1>NAVEGACION</h1>
-                <h3>Productos</h3>
-                <h3>Guía de Talles</h3>
-                <h3>Política de Devolución</h3>
-                <h3>Envíos</h3>
+                <h3>NAVEGACION</h3>
+                <a href="/home">Productos</a> <br />
+                <a href="/talles">Guía de Talles</a> <br />
+                <a href="/devolucion">Política de Devolución</a><br />
             </section>
             <section>
-                <h1>REDES SOCIALES</h1>
-                <h3>Teléfono</h3>
-                <h3>Instagram</h3>
-                <h3>Facebook</h3>
-                <h3>correo@correo.com</h3>
+                <h3>REDES SOCIALES</h3>
+                <a href="#">Instagram</a> <br />
+                <a href="#">Facebook</a> <br />
+                <a href="#">Twitter</a> <br />
+                <a href="#">Whatsapp</a> <br />
             </section>
             <section>
-                <h1>MEDIOS DE PAGOS</h1>
-                <h3>Tarjetas</h3>
+                <h3>MEDIOS DE PAGOS</h3>
+                <h5>Tarjetas</h5>
                 
                 <h3>FORMAS DE ENVÍO</h3>
-                <h3>ANDREANI - OCA</h3>
+                <h5>ANDREANI - OCA</h5>
             </section>
         </footer>
     );

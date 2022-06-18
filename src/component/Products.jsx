@@ -4,6 +4,7 @@ import Stock from '../Stock/Stock';
 import Carrito from './Carrito';
 import swal from 'sweetalert';
 import ItemProduct from './ItemProduct';
+import { Link, useNavigate } from 'react-router-dom'
 
 const Products = () => {
 
@@ -22,17 +23,19 @@ const Products = () => {
 
     return (
         <div className="App">
-            <h1>Lista de Productos</h1>
-            <hr />
-            <div className='Stock'> {prod.map((p, idx) => (
-                <div key={idx}>
-                    <ItemProduct item={p}></ItemProduct>
+            <div className="bandeja">
+                <h1>Lista de Productos</h1>
+                <hr />
+                <div className='Stock'> {prod.map((p, idx) => (
+                    <div key={idx}>
+                        <ItemProduct item={p}></ItemProduct>
+                    </div>
+                ))}
                 </div>
-            ))}
-            </div>
-            <div className='carrito-footer'>
-                <h1>Total Actual: $ .00</h1>
-                <button>Ver Carrito</button>
+                <div className='carrito-footer'>
+                    <h1>Total Actual: $ .00</h1>
+                    <Link to="/carrito">Ver Carrito</Link>
+                </div>
             </div>
         </div>
     );

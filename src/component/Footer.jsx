@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faWhatsapp, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+
 export const Footer = () => {
     return (
         <footer className="footer">
@@ -9,15 +12,18 @@ export const Footer = () => {
             </section>
             <section>
                 <h3>REDES SOCIALES</h3>
-                <a href="#">Instagram</a> <br />
-                <a href="#">Facebook</a> <br />
-                <a href="#">Twitter</a> <br />
-                <a href="#">Whatsapp</a> <br />
+                <FontAwesomeIcon className="iconos" icon={faFacebook} /><a href="#">    Facebook</a>
+                <br />
+                <FontAwesomeIcon className="iconos" icon={faWhatsapp} /><a href="#">    Whatsapp</a>
+                <br />
+                <FontAwesomeIcon className="iconos" icon={faInstagram} /><a href="#">   Instagram</a>
+                <br />
+                <FontAwesomeIcon className="iconos" icon={faTwitter} /><a href="#"> Twitter</a>
             </section>
             <section>
                 <h3>MEDIOS DE PAGOS</h3>
                 <h5>Tarjetas</h5>
-                
+
                 <h3>FORMAS DE ENVÍO</h3>
                 <h5>ANDREANI - OCA</h5>
             </section>

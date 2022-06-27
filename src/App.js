@@ -8,6 +8,8 @@ import { Talles } from './component/Talles';
 import { Devolucion } from './component/Devolucion';
 import NavBar from './component/NavBar';
 import { ContextWrapper } from './services/Context';
+import Contacto from './component/Contacto';
+import Ticket from './component/Ticket';
 
 function App() {
 
@@ -19,8 +21,10 @@ function App() {
           <Route path='/' element={<Products />} />
           <Route path='/home' element={<Products />} />
           <Route path='/carrito' element={<Carrito />} />
+          <Route path='/contacto' element={<Contacto />} />
           <Route path='/talles' element={<Talles />} />
           <Route path='/devolucion' element={<Devolucion />} />
+          <Route path='/ticket' element={<Ticket />} />
         </Routes>
         <Footer />
       </BrowserRouter>

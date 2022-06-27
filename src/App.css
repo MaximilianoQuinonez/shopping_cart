@@ -1,10 +1,61 @@
-.App {
-  text-align: center;
+body {
+  min-height: 100vh;
+  background-color: #000000;
 }
 
-.bandeja{
+.App {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.fondo {
+  background-color: #000000;
+}
+
+.bandeja {
   width: 100%;
   margin: 2rem 0;
+  color: whitesmoke;
+  text-align: center;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bandeja .contenedor-de-texto p {
+  font-size: 15pt;
+}
+
+.bandeja .contenedor-de-texto .iconos {
+  padding: 0 1rem;
+  font-size: 20pt;
+}
+
+.bandeja .contenedor-de-texto a {
+  font-size: 20pt;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.bandeja .contenedor-de-texto img {
+  width: 50%;
+}
+
+.tipos-de-producto a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 15pt;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+.tipos-de-producto a:hover {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 17pt;
+  background: rgb(106, 0, 0);
 }
 
 .Carrito {
@@ -17,10 +68,17 @@
 }
 
 .Item {
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
   width: 300px;
   padding: 1rem;
   border-radius: 1rem;
+  margin: 1rem;
+  transition: transform .2s;
+}
+
+.Item:hover {
+  background-color: rgb(106, 0, 0);
+  transform: scale(1.05);
 }
 
 .Item button {
@@ -34,8 +92,9 @@
 }
 
 .carrito-contenedor {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
   text-align: center;
 }
 
@@ -44,14 +103,29 @@
   margin: 1rem 0 0;
 }
 
+.carrito-header form input {
+  margin: 1rem;
+  height: 45px;
+  width: 300px;
+}
+
 .carrito-header button {
   padding: 0.5rem;
   width: 150px;
   border-radius: 1rem;
+  transition: transform .2s;
+}
+
+.carrito-header button:hover {
+  background-color: rgb(106, 0, 0);
+  color: whitesmoke;
+  font-weight: bold;
+  transform: scale(1.15);
 }
 
 .carrito-footer {
   text-align: center;
+  color: whitesmoke;
 }
 
 .carrito-footer button {
@@ -61,35 +135,18 @@
 }
 
 .carrito-footer button:hover {
-  background-color: skyblue;
+  background-color: rgb(106, 0, 0);
 }
 
 .Stock {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: center;
-  justify-items: center;
+  color: whitesmoke;
 }
 
 .Stock .producto {
-  margin: 2rem;
-}
-
-.Stock .producto .cantidad {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.Stock .producto .cantidad button {
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
-}
-
-.Stock .producto .cantidad button:hover {
-  background: gray;
+  margin: 0.5rem;
 }
 
 .Stock .producto .agregar {
@@ -101,8 +158,17 @@
   background-color: greenyellow;
 }
 
-.Stock img {
-  width: 200px;
+.Stock .producto button {
+  margin: 0.25rem 1rem;
+}
+
+.Stock .producto .quitar {
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.Stock .producto .quitar:hover {
+  background-color: rgb(218, 61, 61);
 }
 
 .Stock p {
@@ -112,24 +178,42 @@
 }
 
 .Stock .container {
-  border: 1px solid black;
+  border: 1px solid whitesmoke;
   width: 300px;
+  height: 500px;
   padding: 1rem;
   border-radius: 1rem;
-  margin: 0 1rem;
+  margin: 1rem;
+  transition: transform .2s;
+  background: rgb(206, 206, 206);
+  background: radial-gradient(circle, rgba(206, 206, 206, 1) 0%, rgba(0, 0, 0, 1) 85%);
 }
 
 .Stock .container:hover {
   border-bottom: 1px solid;
-  background: skyblue;
+  background: rgb(106, 0, 0);
+  transform: scale(1.05);
 }
 
-.contenedor-de-texto {
-  text-align: center;
+.nombre-producto {
+  width: 250px;
+  height: 70px;
+  margin: 0.25rem;
 }
 
-.contenedor-de-texto img {
-  width: 400px;
+.nombre-producto p {
+  padding: 0;
+  margin: 0.25rem;
+}
+
+.cuerpo-producto {
+  height: 330px;
+}
+
+.cuerpo-producto img {
+  height: 215px;
+  margin: 0;
+  padding: 0;
 }
 
 footer {
@@ -138,9 +222,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 2rem;
   font-size: 12pt;
- 
+
 }
 
 footer a {
@@ -159,14 +242,26 @@ footer a:hover {
 }
 
 footer a:active {
-  background: #000000;
   color: whitesmoke;
 }
 
-.me-auto .barrita{
+.me-auto .barrita {
   color: white;
   text-decoration: none;
   margin: 0 1rem;
   font-size: 15pt;
 }
 
+.verCarrito {
+  border: 1px solid whitesmoke;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.verCarrito:hover {
+  background: rgb(106, 0, 0);
+  color: whitesmoke;
+}

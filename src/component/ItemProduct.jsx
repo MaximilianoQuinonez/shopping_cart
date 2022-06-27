@@ -1,30 +1,40 @@
-import React, { useContext } from 'react'
-import Stock from '../Stock/Stock'
+import React, { useContext, useState } from 'react'
 import { Context } from '../services/Context'
+import { useEffect } from 'react'
 
 const ItemProduct = (props) => {
 
-    const {addToCart, deleteFromCart, cant} = useContext(Context)
+    const { addToCart, deleteFromCart, cart } = useContext(Context)
+    const [contar, setContar] = useState(0);
 
-    /*const guardarCarrito = (cart) => {
-        if (typeof (Storage) !== "undefined") {
-            localStorage.setItem("cart", JSON.stringify(cart));
-        } else {
-            // LocalStorage no soportado en este navegador
-        }
-    } */
+    //Para modificar la cantidad de unidades de un producto
+    useEffect(() => {
+    }, [cart])
+
+    const sumarCantidad = () => {
+        setContar(contar + 1)
+    }
+    const restarCantidad = () => {
+        setContar(contar - 1)
+    }
 
     return (
         <div className="container">
-            <div className='producto' key={props.item.id}>
-                <p>{props.item.nombre}</p>
-                <img src={props.item.imagen} alt="imagen del producto" />
-                {props.item.cantidad && <p>Cantidad: {props.item.cantidad}</p>}
-                <p>Precio Unitario: ${props.item.precio}.00</p>
-                <br />
-                <button className='agregar' onClick={() => { addToCart(props.item) }}>Agregar</button>
-                <button className='agregar' onClick={() => { deleteFromCart(props.item.id) }}>Borrar</button>
-            </div>
+            <article className='producto'>
+                <div className='nombre-producto'>
+                    <p>{props.item.nombre}</p>
+                </div>
+                <div className='cuerpo-producto'>
+                    <img src={props.item.imagen} alt="imagen del producto" />
+                    {props.item.cantidad && <p>Cantidad:{contar}</p>}
+                    <p>Precio Unitario: ${props.item.precio}.00</p>
+                    <br />
+                </div>
+                <div className='botones-producto'>
+                    <button className='agregar' onClick={() => { addToCart(props.item); sumarCantidad() }}>Agregar</button>
+                    <button className='quitar' onClick={() => { deleteFromCart(props.item); restarCantidad() }}>Borrar</button>
+                </div>
+            </article>
         </div>
     )
 }

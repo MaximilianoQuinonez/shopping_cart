@@ -3,7 +3,6 @@ import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap"
 import { Link, useNavigate } from 'react-router-dom'
 import '../App.css';
 
-
 const NavBar = () => {
     const navigate = useNavigate()
 
@@ -15,7 +14,7 @@ const NavBar = () => {
                     <Nav className="me-auto">
                         <Link className="barrita" to="/home">Home</Link>
                         <Link className="barrita" to="/carrito">Carrito</Link>
-                        <Link className="barrita" to="#">Contacto</Link>
+                        <Link className="barrita" to="/contacto">Contacto</Link>
                         <Link className="barrita" to="/talles">Talles</Link>
                         <Link className="barrita" to="/devolucion">Política de Devolución</Link>
                     </Nav>

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export const Talles = () => {
     return (
         <div className='bandeja'>

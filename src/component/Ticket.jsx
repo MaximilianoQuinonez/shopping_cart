@@ -13,9 +13,27 @@ const Ticket = (props) => {
     const validarCorreo = (correo) => {
         console.log(correo)
         if (correo.includes('@')) {
-            swal('Compra finalizada, enviamos tu ticket y datos de la compra a tu correo. ¡GRACIAS POR ELEGIRNOS!')
+            swal({
+                title: 'Compra Finalizada',
+                text: 'Enviamos tu ticket y datos de la compra a tu correo.',
+                buttons: {
+                    ok: {
+                        text: 'Aceptar'
+                    }
+                },
+                icon: "success"
+            })
         } else {
-            swal('¡Correo inválido! Revisa el ingresado e intenta nuevamente.')
+            swal({
+                title: 'Correo Inválido',
+                text: 'Revisa el ingresado e intenta nuevamente.',
+                buttons: {
+                    ok: {
+                        text: 'Aceptar'
+                    }
+                },
+                icon: "error"
+            })
         }
     }
 
@@ -45,7 +63,7 @@ const Ticket = (props) => {
                         ></input>
                         <br />
                         <br />
-                        <button type="submit" >Enviar</button>
+                        <button type="submit">Enviar</button>
                     </form>
                     <br />
                     <h1>Carrito $: {total}.00</h1>

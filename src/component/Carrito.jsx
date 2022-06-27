@@ -8,7 +8,17 @@ const Carrito = (props) => {
 
     //Modal de confirmación
     const confirmarCompra = () => {
-        swal("El carrito se confirmo correctamente, para finalizar la compra ingrese los datos finales.")
+        swal({ 
+            closeOnClickOutside: false,
+            title: 'Carrito Cerrado',
+            text: 'Los productos se cargaron correctamente, hace clic en "Continuar" para finalizar la compra.',
+            buttons: {
+                ok: {
+                    text: 'Continuar'
+                }
+            },
+            icon: "info"
+        })
     };
 
     return (

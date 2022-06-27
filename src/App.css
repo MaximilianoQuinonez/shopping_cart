@@ -265,3 +265,20 @@ footer a:active {
   background: rgb(106, 0, 0);
   color: whitesmoke;
 }
+
+.swal-title{
+  color: black;
+}
+
+.swal-text{
+  color: black;
+  text-align: center;
+}
+
+.swal-footer{
+  text-align: center;
+}
+
+.swal-button{
+  background: rgb(106, 0, 0);
+}
